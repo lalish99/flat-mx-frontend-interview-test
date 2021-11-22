@@ -1,4 +1,6 @@
 {
+  "name": "flat_mx_frontend_test",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next",
