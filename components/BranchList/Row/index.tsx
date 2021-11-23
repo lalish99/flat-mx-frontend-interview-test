@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type BranchRowProps = {
   index: number
   name: string
@@ -20,9 +22,11 @@ const BranchRow = ({
       <td style={{whiteSpace: "nowrap", textOverflow: "ellipsis", overflow: "hidden", maxWidth:"1px"}} className="truncate">{commit}</td>
       <td className="w-40">
         <div className="flex flex-row justify-center">
-          <button className="rounded bg-ruby-400 text-white px-2 py-1 mx-auto">
-            View Details
-          </button>
+          <Link href={`branches/${commit}`}>
+            <a  href={`branches/${commit}`} className="rounded bg-ruby-400 text-white px-2 py-1 mx-auto">
+              View Details
+            </a>
+          </Link>
         </div>
       </td>
     </tr>
