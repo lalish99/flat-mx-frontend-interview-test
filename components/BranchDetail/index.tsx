@@ -21,7 +21,7 @@ const BranchDetail = ({commitHexsha}: BranchDetailProps) => {
     const cancel = setBranch === undefined || commitHexsha === undefined || commitHexsha === ""
     if (cancel === true) { return }
     getAndSetBranches()
-  }, [setBranch])
+  }, [setBranch, commitHexsha])
 
   return (
     <div>

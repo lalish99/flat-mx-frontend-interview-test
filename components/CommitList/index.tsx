@@ -7,9 +7,8 @@ type CommitListProps = {
 }
 
 const CommitList = ({commits}: CommitListProps) => {
-  //with commit messages, authors and timestamps.
   return (
-    <table className={styles['branch_list']}>
+    <table className={styles['commit_list']}>
       <thead className="table w-full table-fixed table-fixed text-left text-black-300 bg-white tracking-widest rounded-t-md uppercase text-sm">
         <tr className="h-10 w-full">
           <th className="border-gray-200 border-2 w-10 text-center">#</th>
@@ -23,7 +22,14 @@ const CommitList = ({commits}: CommitListProps) => {
       <tbody className="table w-full overflow-hidden overflow-y-scroll h-full">
         {commits?.map((commit, index)=>{
           return (
-            <CommitListRow index={index} author={commit.author} committed_date={commit.committed_date} summary={commit.summary}/>
+            <CommitListRow 
+              key={index}
+              index={index} 
+              author={commit.author} 
+              committed_date={commit.committed_datetime} 
+              summary={commit.summary}
+              hexsha={commit.hexsha}
+            />
           );
         })}
       </tbody>

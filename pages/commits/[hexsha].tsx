@@ -1,23 +1,23 @@
 import { useRouter } from "next/dist/client/router";
 import Head from "next/head"
 import { useMemo } from "react";
-import BranchDetail from "../../components/BranchDetail";
+import CommitDetail from "../../components/CommitDetail";
 
-const BranchDetailPage = () => {
+const CommitDetailPage = () => {
 
   const router = useRouter()
-  const { commit } = useMemo(()=>{
+  const { hexsha } = useMemo(()=>{
     return router.query
   }, [router, router.query])
 
   return (
     <>
       <Head>
-        <title>Branch Detail</title>
+        <title>Commit Detail</title>
       </Head>
-      <BranchDetail commitHexsha={`${commit}`}/>
+      <CommitDetail hexsha={`${hexsha}`}/>
     </>
   );
 }
 
-export default BranchDetailPage;
+export default CommitDetailPage;

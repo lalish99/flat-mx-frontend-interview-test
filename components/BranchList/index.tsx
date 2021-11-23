@@ -33,7 +33,7 @@ const BranchList = () => {
       <tbody className="table w-full overflow-hidden overflow-y-scroll h-full">
         {branches.map((branch, index)=>{
           return (
-            <BranchRow index={index} name={branch.name} path={branch.path} commit={branch.commit}/>
+            <BranchRow key={index} index={index} name={branch.name} path={branch.path} commit={branch.commit}/>
           );
         })}
       </tbody>

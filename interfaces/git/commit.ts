@@ -22,5 +22,5 @@ export interface CommitDocument {
     tree: string
     hexsha: string
     total_stats: CommitStats
-    file_stats: CommitFileStats
+    file_stats: CommitFileStats[]
 }
