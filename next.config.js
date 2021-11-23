@@ -6,7 +6,7 @@ module.exports = {
     VERSION: process.env.npm_package_version,
     STAGE: process.env.STAGE ?? 'dev',
   },
-  webpack: config => {
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.plugins.push(
       new WebpackBar({
         fancy: true,
@@ -14,13 +14,6 @@ module.exports = {
         basic: false
       })
     )
-    config.node = {
-      ...config.node,
-      fs: 'empty',
-      child_process: 'empty',
-      net: 'empty',
-      tls: 'empty'
-    }
     return config
-  }
+  },
 }
