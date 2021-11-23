@@ -1,0 +1,18 @@
+.pull_request_list {
+    @apply w-full;
+    @apply h-full;
+    @apply bg-white;
+    @apply flex;
+    @apply flex-col;
+    @apply pb-4;
+  
+    & tbody {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE 10+ */
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* Chrome/Safari/Webkit */
+      }
+    }
+  }
+  
