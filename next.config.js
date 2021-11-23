@@ -16,4 +16,13 @@ module.exports = {
     )
     return config
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/branches',
+        permanent: true,
+      },
+    ]
+  },
 }
