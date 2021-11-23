@@ -8,6 +8,9 @@ Because both stacks are natively incompatible, and for further configuration of 
 
 You need both projects running in order to see the completed project. Each repository contains instructions on how to run them and which stack is required.
 
+## TODO: 
+The project missed some of the requirements, the only part that's missing ist he handling of merge failures and the ability to stablish and trigger a merge of a selected pull request.
+
 ----
 ## Releases:
 For conviniece there is a release changelog, which can be accesed directly [on GitHub](https://github.com/lalish99/flat-mx-backend-interview-test/releases). It contains auto-generated releases, which are composed by all the commits between releases. Check [Semantic Release](https://github.com/semantic-release/semantic-release) for more information.
