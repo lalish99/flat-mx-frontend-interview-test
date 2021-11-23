@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { AppLinks } from "../../utils/links";
+import { AppLinks } from "../../store/links";
 import IconFlatMX from "../IconFlatMX";
 import NavbarLink from "./Link";
 
